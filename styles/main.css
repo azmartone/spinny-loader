@@ -2,6 +2,47 @@ body{
     overflow: hidden;
 }
 
+@keyframes scaleup {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(12);
+        opacity: 0.2;
+    }
+}
+
+@keyframes scaleuprotate {
+    0% {
+        transform: scale(1) rotate(-90deg);
+        opacity: 1;
+    }
+    30% {
+        transform: scale(3) rotate(0);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(4) rotate(0);
+        opacity: 1;
+    }
+    60% {
+        transform: scale(5) rotate(0);
+        opacity: 1;
+    }
+    80% {
+        transform: scale(6) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(12) rotate(0);
+        opacity: 0.2;
+    }
+}
+
 @keyframes rotation {
     0% {
       transform: translate(-50%, -50%) scale(1.4) rotateZ(0deg);
@@ -18,15 +59,14 @@ body{
     100% {
       transform: translate(-50%, -50%) scale(1.4) rotateZ(359deg);
     }
-  }
+}
 
 .rotate {
-    animation: rotation 30s infinite linear;
+    animation: rotation 20s infinite linear;
     transform-origin: 50.17% 48.66%;
 }
 
 .loader-container{
-    height: 100vh;
     width: 100vw;
     overflow: hidden; /* Hide scrollbars */
     background: #000;
@@ -36,7 +76,7 @@ body{
     position: absolute;
     left: 50%;
     top: 50%;
-    //transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 @media (orientation: landscape) {
@@ -44,9 +84,27 @@ body{
         height: 100vw;
     }
 }
-
+/* 
 @media (orientation: portrait) {
     .spiral-bg{
         height: 100vh;
     }
+} */
+
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-family: sans-serif;
+}
+
+.scale-up-rotate {
+    animation: scaleuprotate 3s infinite linear;
+}
+
+
+.scale-up-fast {
+    animation: scaleup 1.5s infinite linear;
 }

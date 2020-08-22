@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html>    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
     <link rel="stylesheet" href="styles/main.css" />
+    <script>
+
+        window.addEventListener('resize', ()=>{document.querySelector(".spiral-bg").height = window.innerHeight;});
+    </script>
 <body>
     <div class="loader-container">
         <image class="spiral-bg rotate" src="images/full-green.svg" />
+        <div class="text scale-up-rotate">Let me just<br/>
+            put on my face...</div>
+        
+        <div class="text scale-up-fast">Ha! Ha! Ha!</div>
     </div>
 </body>
 </html>
